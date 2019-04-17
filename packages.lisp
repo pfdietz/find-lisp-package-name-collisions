@@ -183,7 +183,7 @@
             (format s "  ~A~%" fn-or-impl)))))
 
 (defun find-and-print-collisions (dir output-file)
-  (print-collision-to-file
+  (print-collisions-to-file
    (filter-collisions
     (package-names-defined-in-files dir))
    output-file))
