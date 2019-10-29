@@ -182,8 +182,8 @@
        do (dolist (fn-or-impl locs)
             (format s "  ~A~%" fn-or-impl)))))
 
-(defun find-and-print-collisions (dir output-file)
+(defun find-and-print-collisions (dir output-file &optional impl-packages)
   (print-collisions-to-file
    (filter-collisions
-    (package-names-defined-in-files dir))
+    (package-names-defined-in-files dir :impl-packages impl-packages))
    output-file))
